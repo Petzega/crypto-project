@@ -37,6 +37,8 @@ function decrypted() {
             ext = ".txt";
         } else if ((crypto.indexOf("application/json") != -1)) {
             ext = ".json";
+        } else if ((crypto.indexOf("video/mp4") != -1)) {
+            ext = ".mp4";
         };
         link.download = "data" + ext;
         link.href = crypto;
