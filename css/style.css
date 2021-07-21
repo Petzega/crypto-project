@@ -11,7 +11,7 @@
 }
 
 #box{
-    background-color: #37DC96;
+    background-color: #7C7579;
     border: 10px solid #E4E8CE;
     border-radius: 30px;
     width: 60%;
@@ -22,8 +22,11 @@
     padding-top: 2.5%;
     padding-left: 5%;
     padding-right: 5%;
-    padding-bottom: 2.5%;
     border-radius: 30px;
+}
+
+.text-area{
+    padding-bottom: 2.5%;
 }
 
 .text-box {
