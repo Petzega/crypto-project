@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <title>Crypto Project</title>
+  </head>
+  <body>
+    <h1>Proyecto de criptología</h1>
+    <div id="box" class="container-fluid">
+      <div class="mb-3 form-box">
+        <label for="formFile" class="form-label"
+          >Seleccione un archivo en formato excel</label
+        >
+        <input class="form-control" type="file" id="inp-file" />
+      </div>
+      <button type="submit" onclick="encrypted(this)">Encriptar</button>
+      <button type="submit" onclick="decrypted()">Desencriptar</button><br />
+      <div class="form-box">
+        <input id="result" class="form-control" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
+      </div>
+      
+    </div>
+  </body>
+  <footer>
+    <p>By Peter Zegarra - 1614562</p>
+  </footer>
+</html>

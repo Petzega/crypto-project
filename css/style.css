@@ -1,0 +1,14 @@
+#box{
+    background-color: yellowgreen;
+    border: 10px solid slategray;
+    border-radius: 30px;
+    width: 90%;
+}
+
+.form-box {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    border-radius: 30px;
+}
