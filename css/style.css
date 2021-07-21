@@ -12,3 +12,11 @@
     padding-right: 20%;
     border-radius: 30px;
 }
+
+.text-box {
+    height: 250px;
+}
+
+.btn {
+    justify-content: center;   
+}

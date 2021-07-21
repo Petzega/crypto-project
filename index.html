@@ -28,10 +28,10 @@
         >
         <input class="form-control" type="file" id="inp-file" />
       </div>
-      <button type="submit" onclick="encrypted(this)">Encriptar</button>
-      <button type="submit" onclick="decrypted()">Desencriptar</button><br />
+      <button type="submit" class="btn btn-success" onclick="encrypted(this)">Encriptar</button>
+      <button type="submit" class="btn btn-danger" onclick="decrypted()">Desencriptar</button><br />
       <div class="form-box">
-        <input id="result" class="form-control" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
+        <textarea id="result" class="form-control text-box" aria-label="Disabled input example" disabled readonly>Solo lectura</textarea>
       </div>
       
     </div>
