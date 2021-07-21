@@ -11,18 +11,42 @@ function encrypted(secret) {
     toBase64(file)
         .then(res => {
             document.getElementById("result").value = res;
+
         }).catch(err => {
-            $('.alert').alert("Seleccione un archivo");
+            toastr["error"]("No ha seleccionado ningún archivo");
         })
 };
 
 function decrypted() {
     const crypto = document.getElementById("result").value;
-    const link = document.createElement('a');
-    link.hidden = true;
-    link.download = "data.xlsx";
-    link.href = crypto;
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
+    let ext;
+    if (crypto == "Aquí se mostrará el archivo encriptado") {
+        toastr["error"]("No ha seleccionado ningún archivo");
+    } else {
+        const link = document.createElement('a');
+        link.hidden = true;
+        if ((crypto.indexOf("image/jpeg") != -1)) {
+            ext = ".jpeg";
+        } else if ((crypto.indexOf("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") != -1)) {
+            ext = ".xlsx";
+        } else if ((crypto.indexOf("application/vnd.openxmlformats-officedocument.wordprocessingml.document") != -1)) {
+            ext = ".docx";
+        } else if ((crypto.indexOf("image/png") != -1)) {
+            ext = ".png";
+        } else if ((crypto.indexOf("text/plain") != -1)) {
+            ext = ".txt";
+        } else if ((crypto.indexOf("application/json") != -1)) {
+            ext = ".json";
+        };
+        link.download = "data" + ext;
+        link.href = crypto;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+    }
+}
+
+function clean() {
+    document.getElementById("result").value = "Aquí se mostrará el archivo encriptado";
+    document.getElementById("inp-file").value = "";
 }
