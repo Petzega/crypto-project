@@ -5,8 +5,9 @@
     border-radius: 30px;
     text-align: center;
     width: 60%;
-    height: 37.5px;
+    height: 40px;
     margin-left: 20%;
+    display: inline-block;
 }
 
 #box{

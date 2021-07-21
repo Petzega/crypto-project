@@ -12,7 +12,7 @@ function encrypted(secret) {
         .then(res => {
             document.getElementById("result").value = res;
         }).catch(err => {
-            console.log(err);
+            $('.alert').alert("Seleccione un archivo");
         })
 };
 
